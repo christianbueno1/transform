@@ -4,6 +4,9 @@
     box-sizing: border-box;
 
 }
+.wrapper-clippath {
+    border: 2px solid red;
+}
 .inner {
     width: 70vw;
     height: 45vw;
@@ -16,7 +19,7 @@
     background-color: rgb(32, 84, 126);
 }
 .inner-clippath2 {
-    clip-path: circle(25% at 0% 0%);
+    clip-path: circle(0% at 10% 10%);
     color: rgb(34, 165, 226);
     background-color: rgb(32, 84, 126);
     transition: clip-path 2s ease-in-out;
