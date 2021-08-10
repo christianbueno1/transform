@@ -1,0 +1,93 @@
+:root {
+    --on-color1: rgb(122, 179, 233);
+    --on-color2: rgb(28, 121, 228);
+    --on-color3: rgb(255, 255, 255);
+
+    --off-color1: rgb(221, 145, 131);
+    --off-color2: rgb(217, 74, 38);
+    --off-color3: rgb(95, 95, 95);
+}
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    /* background-color: var(--on-color1); */
+
+}
+
+.shape {
+    /* width: max(10vw,600px); */
+    width: 30vw;
+    /* height: max(13vw,390px); */
+    height: 33vw;
+    background-color: var(--on-color2);
+    border-top: 5px solid green;
+    transform: rotate(5deg);
+    transform-origin: top right;
+    transition: background-color .5s ease-in-out;
+}
+.wrapper-clippath.action .shape{
+    background-color: var(--off-color2);
+    transition: background-color .5s ease-in-out;
+
+}
+.wrapper-shape-divider {
+    position: relative;
+}
+.custom-shape-divider-top-1628554708 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1628554708 svg {
+    position: relative;
+    display: block;
+    width: calc(104% + 1.3px);
+    height: 167px;
+}
+
+.custom-shape-divider-top-1628554708 .shape-fill {
+    fill: var(--on-color2);
+    transition: fill .5s ease-in-out;
+}
+.wrapper-clippath.action .custom-shape-divider-top-1628554708 .shape-fill {
+    fill: var(--off-color2);
+    transition: fill .5s ease-in-out;
+}
+.wrapper-clippath {
+    border: 2px solid red;
+    /* background-color: var(--on-color1); */
+    color: var(--on-color3);
+    transition: color .5s ease-in-out;
+}
+
+.wrapper-clippath.action{
+    background-color: var(--off-color1);
+    color: var(--off-color3);
+    transition: color .5s ease-in-out;
+}
+.inner-clippath {
+    clip-path: circle(10% at 0% 0%);
+    transition: clip-path .5s ease-in-out;
+}
+.wrapper-clippath.action .inner-clippath {
+    clip-path: circle(200% at 0% 0%);
+    transition: clip-path .5s ease-in-out;
+
+}
+.wrapper-clippath-on {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    border: 1px solid red;
+    background-color: var(--on-color1);
+    color: var(--on-color3);
+    z-index: -1;
+}

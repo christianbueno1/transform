@@ -1,0 +1,29 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.inner {
+    width: 70vw;
+    height: 45vw;
+    font-size: 5rem;
+    text-align: center;
+    line-height: 45vw;
+}
+.inner-clippath {
+    color: rgb(34, 165, 226);
+    background-color: rgb(32, 84, 126);
+}
+.inner-clippath2 {
+    clip-path: circle(25% at 0% 0%);
+    color: rgb(34, 165, 226);
+    background-color: rgb(32, 84, 126);
+    transition: clip-path 2s ease-in-out;
+}
+.inner-clippath2.action {
+    clip-path: circle(150% at 0% 0%);
+    color: rgb(240, 62, 101);
+    background-color: rgb(134, 24, 48);
+    transition: clip-path 2s ease-in-out;
+}
